@@ -6,23 +6,33 @@
     <title>Document</title>
   </head>
   <body>
-    <a href="http://wp.pl">Link do WP</a>
+    <div class="link"></div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quisquam
       impedit natus id velit? Magnam laudantium, culpa temporibus ipsa cum quos
       eos, praesentium eveniet rerum perspiciatis porro repellendus amet eaque.
     </p>
-    <a href="http://wp.pl">Link do WP</a>
+    <div class="link"></div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quisquam
       impedit natus id velit? Magnam laudantium, culpa temporibus ipsa cum quos
       eos, praesentium eveniet rerum perspiciatis porro repellendus amet eaque.
     </p>
-    <a href="http://wp.pl">Link do WP</a>
+    <div class="link"></div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quisquam
       impedit natus id velit? Magnam laudantium, culpa temporibus ipsa cum quos
       eos, praesentium eveniet rerum perspiciatis porro repellendus amet eaque.
     </p>
+    <script>
+      document.querySelectorAll(".link").forEach((link) => {
+        const anchorElement = document.createElement("a");
+        anchorElement.textContent = "Link do WP";
+        anchorElement.href = "http://wp.pl";
+        anchorElement.target = "_blank";
+        anchorElement.rel = "noopener noreferr";
+        link.append(anchorElement);
+      });
+    </script>
   </body>
 </html>
