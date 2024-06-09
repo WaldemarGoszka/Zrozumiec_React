@@ -33,14 +33,23 @@
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
     <script>
-      document.querySelectorAll(".link").forEach((link) => {
-        const anchorElement = document.createElement("a");
-        anchorElement.textContent = "Link do WP";
-        anchorElement.href = "http://wp.pl";
-        anchorElement.target = "_blank";
-        anchorElement.rel = "noopener noreferr";
-        link.append(anchorElement);
-      });
+      // document.querySelectorAll(".link").forEach((link) => {
+      //   const anchorElement = document.createElement("a");
+      //   anchorElement.textContent = "Link do WP";
+      //   anchorElement.href = "http://wp.pl";
+      //   anchorElement.target = "_blank";
+      //   anchorElement.rel = "noopener noreferr";
+      //   link.append(anchorElement);
+      // });
+      document.querySelectorAll("link").forEach((link) => {
+        const anchorElement = React.createElement("a", (
+        href: "http://wp.pl",
+        target: "_blank",
+        rel = "noopener noreferr"
+      ), "Link do WP");
+
+      })
+      ReactDOM.createRoot(link).render(anchorElement);
     </script>
   </body>
 </html>
