@@ -41,15 +41,19 @@
       //   anchorElement.rel = "noopener noreferr";
       //   link.append(anchorElement);
       // });
-      document.querySelectorAll("link").forEach((link) => {
-        const anchorElement = React.createElement("a", (
-        href: "http://wp.pl",
-        target: "_blank",
-        rel = "noopener noreferr"
-      ), "Link do WP");
 
-      })
-      ReactDOM.createRoot(link).render(anchorElement);
+      document.querySelectorAll(".link").forEach((link) => {
+        const anchorElement = React.createElement(
+          "a",
+          {
+            href: "http://wp.pl",
+            target: "_blank",
+            rel: "noopener noreferr",
+          },
+          "Link do WP"
+        );
+        ReactDOM.createRoot(link).render(anchorElement);
+      });
     </script>
   </body>
 </html>
