@@ -9,5 +9,7 @@ let ageAsString: string = "eighteen";
 ageAsString = "twenty"; //ok
 ageAsString = `${age}`; //ok
 
+console.log(ageAsString);
+
 const add = (v1: number, v2: number) => v1 + v2;
 console.log(add(10, 50));
