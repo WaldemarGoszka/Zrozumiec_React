@@ -23,28 +23,8 @@ console.log("###");
 console.log(".filter");
 console.log("###");
 
-people.forEach(logPersonInfo);
-
-const richPeople = [];
-
-for (let i = 0; i < people.length; i++) {
-  const person = people[i];
-  if (person.salary > 5000) {
-    richPeople.push(person);
-  }
-}
-
 console.log("Rich people:");
-console.log(richPeople);
-
-const polishPeople = [];
-
-for (let i = 0; i < people.length; i++) {
-  const person = people[i];
-  if (person.country === "Polska") {
-    polishPeople.push(person);
-  }
-}
+people.filter((person) => person.salary > 5000).forEach(logPersonInfo);
 
 console.log("Polish people:");
-console.log(polishPeople);
+people.filter((person) => person.country === "Polska").forEach(logPersonInfo);
